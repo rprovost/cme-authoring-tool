@@ -1,0 +1,104 @@
+<?php
+
+class LyricsAsset extends AssetPlugin {
+
+	// define plugin parameters
+	protected $PLUGINID			= 'lyrics-asset';
+	protected $PLUGINSHORTNAME	= 'Lyrics';
+	protected $PLUGINNAME		= 'CME/X Lyrics Asset Plugin';
+	protected $PLUGINCOMMENT	= 'With this plugin, you are able to create Lyrics assets in accordance with the CME/X Specification.';
+	protected $PLUGINVIEW		= 'LyricsAsset-View.php';
+
+	// collection definition
+	protected $COLLECTION		= 'lyricsCollection';
+	protected $COLLECTIONTYPE	= 'DocumentCollection';
+
+	// field to retrieve artist information from
+	protected $ARTISTFIELD		= 'artist';
+
+	function getURI() {
+		// do we have a defined uri already?
+		if (isset($this->postdata) && isset($this->postdata['uri'])) {
+			return $this->postdata['uri'];
+
+		// do we have enough information to create a uri?
+		} else if (isset($this->postdata) && !isset($this->postdata['uri'])) {
+			$this->postdata['uri'] = 'documents/'.str_replace('%2F','/',urlencode(trim($this->postdata['title'])));
+			return $this->postdata['uri'];
+		}
+
+		// we didn't have a uri and we don't have enough information to create one
+		return false;
+	}
+
+	// since these attributes are optional, we don't want to output the attribute with an empty value that won't validate
+	protected function getAttribute($attribute) {
+		list($ns,$name) = explode(':',$attribute);
+
+		// if this attribute was populated, we'll output it
+		if (strlen($this->postdata[$name])>0) {
+			return $attribute.'="'.$this->scrub($this->postdata[$name]).'" ';
+		}
+
+		// didn't get any data for this attribute, let's not output it
+		return false;
+	}
+
+	// if we have thumbnail data, inject it
+	protected function getThumbnail() {
+		if ($this->postdata['thumbnail_selector'] == 'remote') {
+			$thumbnail = $this->scrub($this->postdata['thumbnail']);
+		} else {
+			$thumbnail	= 'audio/'.$this->scrub($this->postdata['thumbnail'],true);
+		}
+
+		if(strlen($this->postdata['thumbnail'])>0) {
+			$xml .= '<image>';
+			$xml .= '<Image dc:title="thumbnail" rdf:parseType="Resource">';
+			$xml .= '<displayArtist rdf:resource="contributors/'.$artist.'" />';
+			$xml .= '<encoding>';
+			$xml .= '<Encoding rdf:about="'.$thumbnail.'" dc:title="'.$this->scrub($this->postdata['title']).'" cmx:format="image/png"/>';
+			$xml .= '</encoding>';
+			$xml .= '</Image>';
+			$xml .= '</image>';
+		}
+		return $xml;
+	}
+
+	function asXML() {
+		// scrub the data we have for proper xml output
+		$title		= $this->scrub($this->postdata['title']);
+		$artist		= $this->scrub($this->postdata['artist'],true);
+
+		if ($this->postdata['location'] == 'remote') {
+			$path = $this->scrub($this->postdata['path']);
+		} else {
+			$path	= 'audio/'.$this->scrub($this->postdata['path'],true);
+		}
+
+		// format data for xml output
+		// format data for xml output
+		$xml .= '<Document dc:title="'.$title.'" rdf:about="'.$this->getURI().'" rdf:type="http://cme-spec.org/0.9/terms#PublishedLyrics" rdf:parseType="Resource">';
+		$xml .= '<displayArtist rdf:resource="contributors/'.$artist.'" />';
+		$xml .= '<encoding>';
+		$xml .= '<Encoding rdf:about="'.$location.'" dc:title="'.$title.'" cmx:format="'.$this->postdata['format'].'" '.
+						$this->getAttribute('cmx:cache').
+						$this->getAttribute('cmx:requiresRegistration').
+						$this->getAttribute('cmx:requiresProofOfPurchase').
+						$this->getAttribute('cmxadmin:downloadsAllowed').
+						$this->getAttribute('cmxadmin:externalMethod').
+						$this->getAttribute('cmxadmin:externalURL').
+						$this->getAttribute('cmxadmin:timeToLive').
+					' />';
+		$xml .= '</encoding>';
+
+		// let's get the thumbnail object if we need to
+		$xml .= $this->getThumbnail();
+
+		// close the node
+		$xml .= '</Document>';
+
+		// return the XML
+		return $xml;
+	}
+}

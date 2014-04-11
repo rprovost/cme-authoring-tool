@@ -1,0 +1,157 @@
+/*** FORM FIELDS ***/
+#artist { color: #000000; }
+#title { color: #000000; }
+
+/*** ASSET LIST ***/
+.assets {
+	padding: 0px 125px;
+	width: 550px;
+	margin: auto;
+	margin-bottom: 25px;
+	height: 425px;
+	overflow: auto;
+}
+
+.emptyaccordion {
+	text-align: center;
+}
+
+/*** ASSET HEADER ***/
+.truncated {
+	max-width: 250px;
+}
+
+.artisthead {
+	display: inline;
+}
+
+.titlehead {
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+	display: inline;
+}
+
+.remove {
+	display: none;
+	margin: 2px;
+	padding: 0px;
+	float: right;
+}
+
+/*** FORM DISPLAY ***/
+.complete,.error,.processing {
+	display: none;
+}
+
+.sub-table-col-field .url,.file {
+	display: none;
+}
+
+.sub-table-col-field input.text {
+	float: right;
+	width: 225px;
+}
+
+.editor .sub-table {
+	width: 350px;
+	margin: 0px;
+}
+
+.editor .sub-table-header {
+	text-align: left;
+	width: 115px;
+}
+
+/*** NEW ASSET SELECTOR ***/
+.selector.plugins {
+	display: none;
+	margin-left: 12px;
+	padding: 5px;
+	position: absolute;
+	background: #4F5151;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.selector.plugins .plugin a {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.selector.plugins .plugin:hover {
+	background: #676767;
+}
+
+/*** SECURITY BOX ***/
+.expander {
+	display: none;
+	margin: 1px;
+	padding: 0px;
+	float: right;
+	#-webkit-transform: rotate(45deg);
+}
+
+.security {
+	display: none;
+	font-size: 10pt;
+	border: 1px solid #f5f5f5;
+	border-right-color: #ddd;
+	border-bottom-color: #ddd;
+	background: #FDE8BE;
+	color: #333;
+	margin: 2px 0 4px 0;
+	padding: 3px 5px 1px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.security select {
+	border: 1px solid #DDD;
+	font-size: 10px;
+	margin: 0px;
+	padding: 8px;
+	width: 150px;
+	background: #FBFBFB;
+	border: 1px solid #A8A8A8;
+}
+
+.security .details {
+	display: none;
+	margin-top: 10px;
+}
+
+.security .details table {
+	width: 180px;
+	margin: 0px;
+}
+
+.security .details th {
+	color: #333;
+	font-size: 10pt;
+	font-weight: normal;
+	line-height: 24px;
+	padding-right: 10px;
+	vertical-align: top;
+	width: 180px;
+}
+
+.security .details td {
+	color: #333;
+	font-size: 10pt;
+	font-weight: normal;
+	line-height: 24px;
+	padding-right: 10px;
+	vertical-align: top;
+	width: 180px;
+}
+
+.security .details hr {
+	height: 1px;
+	background-color: #333;
+	border: 0px;
+}
+

@@ -1,0 +1,24 @@
+.artisthead {
+	display: inline;
+}
+
+.titlehead {
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+	display: inline;
+}
+
+#controls {
+	width: 375px;
+	margin: auto;
+}
+
+.bundle {
+	padding: 0px 125px;
+	width: 550px;
+	margin: auto;
+	margin-bottom: 25px;
+	height: 425px;
+	overflow: auto;
+}

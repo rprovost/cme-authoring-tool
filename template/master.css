@@ -1,0 +1,355 @@
+body {
+	color: #333;
+	font: normal normal normal 18px/normal Helvetica, Arial, sans-serif;
+	background: #EEF2F6 url(http://www.mysonystuff.com/authoring/images/topbackground.gif) repeat-x scroll 0 0;
+}
+
+#button {
+	width: 175px;
+	margin: auto;
+	background: #9C2 url(/authoring/images/button.png) repeat-x 0px 0px;
+	border: 1px solid #DF6;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color: #333;
+	display: block;
+	font: normal normal normal 18px/normal Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	outline: none;
+	padding: 8px 10px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: #DF6 0px 1px 0px;
+}
+
+#method {
+	width: 550px;
+	margin: auto;
+	background: #FDB841;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding-bottom: 15px;
+	margin-bottom: 25px;
+}
+
+#method #comment {
+	clear: both;
+	margin-top: 30px;
+	font-size: 10pt;
+	text-align: center;
+}
+
+#method #comment a {
+	color: #333
+}
+
+#spacer {
+	width: 550px;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#method #copy {
+	padding: 15px;
+	font: normal normal normal 22px/normal Helvetica, Arial, sans-serif;
+	color: #333;
+	//text-align: center;
+}
+
+#uploader {
+	position: relative;
+	top: -20px;
+	height: 25px;
+}
+
+.uploader {
+	opacity: 0;
+	position: relative;
+	top: 30px;
+	left: 182px;
+	z-index: 2;
+}
+
+.banner {
+	width: 750px;
+	margin: auto;
+	margin-bottom: 25px;
+	text-align: center;
+	font: normal normal normal 26px/normal Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 25px;
+	background: #4F5151;
+}
+
+#copyright {
+	width: 750px;
+	margin: auto;
+	margin-bottom: 25px;
+	text-align: center;
+	font: normal normal normal 12px/normal Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 5px;
+	background: #4F5151;
+}
+
+fieldset {
+	border: 0px;
+}
+
+.element {
+	width: 500px;
+}
+
+
+.element #text {
+	width: 	350px;
+	margin: auto;
+	margin-bottom: 25px;
+}
+
+#text {
+	width: 300px;
+	margin: auto;
+	margin-bottom: 25px;
+}
+
+select, input, radio, text, textarea {
+	outline: none;
+}
+
+#textinput {
+	background: white;
+	border: solid #EEE;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	font: normal normal normal 18px/normal Helvetica, Arial, sans-serif;
+	margin: 0px;
+	outline-width: 0px;
+	padding: 8px 5px;
+	width: 300px;
+}
+
+#add_link {
+	width: 550px;
+	margin: auto;
+}
+
+h3.toggler {
+	outline: none;
+	cursor: pointer;
+	border: 1px solid #f5f5f5;
+	border-right-color: #ddd;
+	border-bottom-color: #ddd;
+	font: normal normal normal 18px/normal Helvetica, Arial, sans-serif;
+	background: #FDB841;
+	color: #333;
+	margin: 0 0 4px 0;
+	padding: 3px 5px 1px;
+	width: 550px;
+	height: 21px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.input-form {
+	overflow: auto;
+}
+
+div.element {
+	margin:0px;
+	padding:15px;
+}
+
+div.space {
+	height: 5px;
+}
+
+span.remover {
+	font: normal normal normal 12px/normal Helvetica, Arial, sans-serif;
+	float: right;
+	overflow: ;
+}
+
+blockquote {
+	padding:5px 20px;
+}
+
+.element #optimzedfor {
+	background-image: (chrome.png);
+}
+
+.editor table {
+	border-collapse: collapse;
+	margin-bottom: 20px;
+	width: 475px;
+
+}
+
+.editor th {
+	color: #666;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 42px;
+	padding-right: 10px;
+	text-align: right;
+	vertical-align: top;
+	width: 180px;
+}
+
+input.text {
+	border: 1px solid #DDD;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	font-size: 14px;
+	margin: 0px;
+	padding: 8px;
+	width: 350px;
+}
+
+.text:active, .text:focus {
+	outline-style: none;
+	outline-width: 0px;
+}
+
+input.text.with-box {
+	-moz-border-radius-bottomright: 0px 0px;
+	-moz-border-radius-topright: 0px 0px;
+	-webkit-border-radius-bottomright: 0px 0px;
+	-webkit-border-radius-topright: 0px 0px;
+}
+
+input.url {
+	margin-left: 15px;
+}
+
+select {
+	border: 1px solid #DDD;
+	font-size: 14px;
+	margin: 0px;
+	padding: 8px;
+	width: 150px;
+	background: #FBFBFB;
+	border: 1px solid #A8A8A8;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+tr {
+	margin: 10px;
+}
+
+th {
+	white-space: nowrap;
+}
+
+#controls {
+	width: 550px;
+	margin: auto;
+}
+
+#add_asset, .button {
+	width: 150px;
+	background: #9C2 url(/authoring/images/button.png) repeat-x 0px 0px;
+	border: 1px solid #DF6;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color: #333;
+	float: left;
+	margin: 5px;
+	display: block;
+	font: normal normal normal 18px/normal Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	outline: none;
+	padding: 8px 10px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: #DF6 0px 1px 0px;
+}
+
+#bundleid {
+	width: 540px;
+	margin: auto;
+	margin-bottom: 20px;
+	font: normal normal normal 22px/normal Helvetica, Arial, sans-serif;
+	color: #CFCFCF;
+}
+
+#builderstatus {
+	width: 220px;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.fileSelected {
+	font: normal normal normal 12px/normal Helvetica, Arial, sans-serif;
+	margin-left: 20px;
+}
+
+.statusText {
+	display: none;
+	font: normal normal normal 12px/normal Helvetica, Arial, sans-serif;
+	padding: 2px 15px 0 0;
+	float: right;
+}
+
+.statusType {
+	display: none;
+	font: normal normal normal 12px/normal Helvetica, Arial, sans-serif;
+	padding: 0px 40px 0 0;
+	margin-top: -1px;
+	float: right;
+}
+
+
+.status img {
+	display: none;
+	margin-top: -2px;
+	padding: 0 11px 0 0;
+	float: right;
+}
+
+.photoMsg {
+	float: right;
+	font: normal normal normal 12px/normal Helvetica, Arial, sans-serif;
+	margin-top: 0px;
+	margin-left: 15px;
+}
+
+.imageUpload {
+	margin-top: 15px;
+	float: right;
+	padding: 0 0 25px 0;
+	width: 100px;
+	height: 50px;
+	margin-left: 20px;
+}
+
+.topDropdown {
+	list-style: none;
+	border: 0px solid #DDD;
+	padding: 0px 0px 0px 0px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	font: normal normal normal 12px/normal Helvetica, Arial, sans-serif;
+	width: 93px;
+	height: 21px;
+}
+
+.imgSelected {
+	float: right;
+	margin-top: -15px;
+}
+
+
+.headerTruncate {
+	float: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
