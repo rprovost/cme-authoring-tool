@@ -6,6 +6,7 @@ EXPRESS, IMPLIED OR OTHERWISE, REGARDING ITS CONDITION OR PERFORMANCE,
 OR FITNESS FOR A PARTICULAR PURPOSE.
 
 @author Ryan Provost (ryan.provost@sonymusic.com)
+
 @author Chris Young-Zawada (chris.young-zawada@wmg.com)
 
 VERSION HISTORY
